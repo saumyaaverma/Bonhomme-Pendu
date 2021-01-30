@@ -1,35 +1,48 @@
 import java.util.ArrayList;
 public class Hangman {
-
+    
+    /* declaring the attributes*/
     private String aWord;
     final private int aMaxTries = 6;
     private int aAttemptedTries;
     private ArrayList<Character> aLettersTried;
-    private ArrayList<Character> aWordFound;
+    private Character[] aWordFound;
 
+    
+    /*the constructor*/
     public Hangman(String word) {
         aAttemptedTries = 0;
         aWord = word;
         aLettersTried = new ArrayList<Character>();
-        aWordFound= new ArrayList<Character>(word.length());
+        aWordFound= new Character[word.length()];
+        for (int i =0; i< word.length(); i++) {
+            if (aWord.charAt(i) == ' ') {
+                aWordFound[i] = (' ');
+            }
+            else{
+                aWordFound[i] = ('_');
+            }
+        }
     }
-
+    
+    /* Checks if the letter is present in the word*/
     public void tryLetter(Character c) {
+        int x = 0;
         boolean temp = true;
         for (int i =0; i< aWord.length(); i++) {
-            if (aWord.charAt(i) == c) {
+            if (Character.toLowerCase(aWord.charAt(i)) == Character.toLowerCase(c)) {
                 //Letter found, add it to gui
-                aWordFound.set(i, c);
+                aWordFound[i] = c;
                 temp = false;
             }
         }
         if (temp) {
             aLettersTried.add(c);
             aAttemptedTries++;
-
         }
     }
 
+    
     public int getAttemptedTries() {
         return aAttemptedTries;
     }
@@ -38,15 +51,20 @@ public class Hangman {
         return aMaxTries;
     }
 
+    /*checks if word is correctly guessed*/
     public boolean wordIsFound() {
         boolean ans = true;
-
         for (int i=0; i < aWord.length(); i++) {
-            if (!(aWord.charAt(i) == aWordFound.get(i))) {
+            if (!(Character.toLowerCase(aWord.charAt(i)) == Character.toLowerCase(aWordFound[i]))) {
                 ans = false;
             }
         }
 
         return ans;
     }
+
+    public Character[] getWordFound(){
+        return aWordFound;
+    }
+
 }
