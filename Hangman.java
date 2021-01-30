@@ -12,11 +12,6 @@ public class Hangman {
         aWord = word;
         aLettersTried = new ArrayList<Character>();
         aWordFound= new ArrayList<Character>(word.length());
-        for (int i =0; i< word.length(); i++) {
-    		if (aWord.charAt(i) == ' ') {
-    			aWordFound.set(i, ' ');
-    		}
-    	}
     }
 
     public void tryLetter(Character c) {
@@ -31,10 +26,27 @@ public class Hangman {
         if (temp) {
             aLettersTried.add(c);
             aAttemptedTries++;
-            if (aAttemptedTries >= aMaxTries) {
-                //Print the gui, quit the game, maybe print the answer
-            }
 
         }
+    }
+
+    public int getAttemptedTries() {
+        return aAttemptedTries;
+    }
+
+    public int getMaxTries() {
+        return aMaxTries;
+    }
+
+    public boolean wordIsFound() {
+        boolean ans = true;
+
+        for (int i=0; i < aWord.length(); i++) {
+            if (!(aWord.charAt(i) == aWordFound.get(i))) {
+                ans = false;
+            }
+        }
+
+        return ans;
     }
 }
