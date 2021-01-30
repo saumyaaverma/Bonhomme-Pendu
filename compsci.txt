@@ -1,0 +1,111 @@
+McHacks
+Analog
+Bandwidth
+Data
+Bit
+Cloud storage
+Code
+Control panel
+CPU
+Data security
+Debugging
+Digital
+Disk storage
+Ethernet
+Hacker
+HTML
+Hub
+IP address
+LAN
+Processor
+RAM
+ROM
+Download
+Documentation
+Domain
+Software
+Development
+algorithm
+array
+big O notation
+binary
+boolean
+class
+character
+class orientation
+object oriented
+compiler
+operating system
+computer
+for loop
+while loop
+csv
+download
+executable
+java
+python
+assembler
+filename
+heap
+divide and conquer
+input output
+kernel
+list
+linker
+linked list
+loader
+logic
+machine learning
+memory
+node
+object oriented
+queue
+quicksort
+recursion
+router
+run time
+search algorithm
+set
+source code
+stack
+storage
+stream
+string
+subroutine
+syntax error
+user
+user interface
+variable
+virtual machine
+web
+hardware
+process
+shell
+programmer
+software engineer
+interface
+online
+input
+buffer
+directory
+logic
+run
+environment
+upgrade
+desktop
+server
+prompt
+interactive
+field
+terminal
+code
+tree
+hash table
+linked list
+graph
+command
+function
+if statement
+internet
+back end
+
