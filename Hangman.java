@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class Hangman {
-    
+
     /* declaring the attributes*/
     private String aWord;
     final private int aMaxTries = 6;
@@ -8,7 +8,7 @@ public class Hangman {
     private ArrayList<Character> aLettersTried;
     private Character[] aWordFound;
 
-    
+
     /*the constructor*/
     public Hangman(String word) {
         aAttemptedTries = 0;
@@ -24,38 +24,38 @@ public class Hangman {
             }
         }
     }
-    
+
     /* Checks if the letter is present in the word*/
     public void tryLetter(Character c) {
-    	boolean tried = false;
-    	for (int i=0; i< aLettersTried.size(); i++) {
-    		if (Character.toLowerCase(aLettersTried.get(i)) == Character.toLowerCase(c)) {
-    			System.out.println("Letter was already tried, guess again ");
-    			tried = true;
-    		}
-    	}
-    	
-    	if (!tried) {
-    		boolean temp = true;
-    		for (int i =0; i< aWord.length(); i++) {
-    			if (Character.toLowerCase(aWordFound[i]) == Character.toLowerCase(c)) {
-        			System.out.println("Letter was already found, guess again ");
-        			temp = false;
-        			break;
-        		} else if (Character.toLowerCase(aWord.charAt(i)) == Character.toLowerCase(c)) {
-    				//Letter found, add it to gui
-    				aWordFound[i] = c;
-    				temp = false;
-    			}
-    		}
-    		if (temp) {
-    			aLettersTried.add(c);
-    			aAttemptedTries++;
+        boolean tried = false;
+        for (int i=0; i< aLettersTried.size(); i++) {
+            if (Character.toLowerCase(aLettersTried.get(i)) == Character.toLowerCase(c)) {
+                System.out.println("Letter was already tried, guess again ");
+                tried = true;
+            }
+        }
 
-    		}
-    	}
+        if (!tried) {
+            boolean temp = true;
+            for (int i =0; i< aWord.length(); i++) {
+                if (Character.toLowerCase(aWordFound[i]) == Character.toLowerCase(c)) {
+                    System.out.println("Letter was already found, guess again ");
+                    temp = false;
+                    break;
+                } else if (Character.toLowerCase(aWord.charAt(i)) == Character.toLowerCase(c)) {
+                    //Letter found, add it to gui
+                    aWordFound[i] = c;
+                    temp = false;
+                }
+            }
+            if (temp) {
+                aLettersTried.add(c);
+                aAttemptedTries++;
+
+            }
+        }
     }
-    
+
     public int getAttemptedTries() {
         return aAttemptedTries;
     }
