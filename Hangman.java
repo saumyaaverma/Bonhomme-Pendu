@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class hangman {
+public class Hangman {
 
     private String aWord;
     final private int aMaxTries = 6;
@@ -7,14 +7,14 @@ public class hangman {
     private ArrayList<Character> aLettersTried;
     private ArrayList<Character> aWordFound;
 
-    public void newHangman(String word) {
+    public Hangman(String word) {
         aAttemptedTries = 0;
         aWord = word;
-        aLettersTried.clear();
+        aLettersTried = new ArrayList<Character>();
         aWordFound= new ArrayList<Character>(word.length());
     }
 
-    private void tryLetter(Character c) {
+    public void tryLetter(Character c) {
         boolean temp = true;
         for (int i =0; i< aWord.length(); i++) {
             if (aWord.charAt(i) == c) {
