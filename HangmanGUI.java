@@ -1,11 +1,6 @@
 public class HangmanGUI {
 
-
-    public void printBird() {
-        System.out.println();
-    }
-
-
+    /*the hangman*/
     public static void addLimb(int i) {
         if (i == 0) System.out.println("________\n |     |\n |\n |\n |\n |\n |");
 
@@ -22,30 +17,13 @@ public class HangmanGUI {
         if (i == 6) System.out.println("________\n |     |\n |     O\n |     |\n |    \\|/\n |     |\n |    / \\\n |");
     }
 
-
-    public static void letterDisplay(char[] word) {
-
-        for (int i = 0; i < word.length; i++) {
-            System.out.print(" ");
+    /*printing the word*/
+    public static void initialPrint(Character[] letters) {
+        System.out.println();
+        for (int i =0; i < letters.length; i++) {
+            System.out.print(Character.toLowerCase(letters[i]));
         }
-
-
-    }
-
-
-
-    public static void main(String[] args) {
-        addLimb(0);
-        addLimb(1);
-        addLimb(2);
-        addLimb(3);
-        addLimb(4);
-        addLimb(5);
-        addLimb(6);
-
-
-        char[] words = {'h', 'a', 'n', 'g', 'm', 'a', 'n'};
-        letterDisplay(words);
+        System.out.println();
     }
 
 }
