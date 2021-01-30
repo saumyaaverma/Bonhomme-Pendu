@@ -34,12 +34,6 @@ public class Hangman {
     			tried = true;
     		}
     	}
-    	for (int i=0; i< aWordFound.length; i++) {
-    		if (Character.toLowerCase(aWordFound[i]) == Character.toLowerCase(c)) {
-    			System.out.println("Letter was already found, guess again ");
-    			tried = true;
-    		}
-    	}
     	
     	if (!tried) {
     		boolean temp = true;
@@ -47,6 +41,7 @@ public class Hangman {
     			if (Character.toLowerCase(aWordFound[i]) == Character.toLowerCase(c)) {
         			System.out.println("Letter was already found, guess again ");
         			temp = false;
+        			break;
         		} else if (Character.toLowerCase(aWord.charAt(i)) == Character.toLowerCase(c)) {
     				//Letter found, add it to gui
     				aWordFound[i] = c;
