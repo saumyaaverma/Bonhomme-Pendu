@@ -1,5 +1,5 @@
 Drivers License
-34+35
+Thriller
 Mood
 Blinding lights
 positions
@@ -22,7 +22,7 @@ lemonade
 bad boy
 what you know bout love
 wasted on you
-7 summers
+Billy Jean
 anyone
 more than my hometown
 willow
@@ -33,7 +33,7 @@ youre mines still
 on me
 my exs best friend
 starting over
-somebody's problem
+somebodys problem
 rockstar
 i should probably go to bed
 streets
@@ -71,7 +71,7 @@ down to one
 cover me up
 warning
 just the way
-865
+mamma mia
 mr right now
 undivided
 monsters
