@@ -12,6 +12,11 @@ public class Hangman {
         aWord = word;
         aLettersTried = new ArrayList<Character>();
         aWordFound= new ArrayList<Character>(word.length());
+        for (int i =0; i< word.length(); i++) {
+    		if (aWord.charAt(i) == ' ') {
+    			aWordFound.set(i, ' ');
+    		}
+    	}
     }
 
     public void tryLetter(Character c) {
