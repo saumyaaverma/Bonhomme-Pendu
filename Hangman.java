@@ -27,21 +27,29 @@ public class Hangman {
     
     /* Checks if the letter is present in the word*/
     public void tryLetter(Character c) {
-        int x = 0;
-        boolean temp = true;
-        for (int i =0; i< aWord.length(); i++) {
-            if (Character.toLowerCase(aWord.charAt(i)) == Character.toLowerCase(c)) {
-                //Letter found, add it to gui
-                aWordFound[i] = c;
-                temp = false;
-            }
-        }
-        if (temp) {
-            aLettersTried.add(c);
-            aAttemptedTries++;
-        }
-    }
+    	boolean tried = false;
+    	for (int i=0; i< aLettersTried.size(); i++) {
+    		if (Character.toLowerCase(aLettersTried.get(i)) == Character.toLowerCase(c)) {
+    			System.out.println("Letter was already tried, guess again ");
+    			tried = true;
+    		}
+    	}
+    	if (!tried) {
+    		boolean temp = true;
+    		for (int i =0; i< aWord.length(); i++) {
+    			if (Character.toLowerCase(aWord.charAt(i)) == Character.toLowerCase(c)) {
+    				//Letter found, add it to gui
+    				aWordFound[i] = c;
+    				temp = false;
+    			}
+    		}
+    		if (temp) {
+    			aLettersTried.add(c);
+    			aAttemptedTries++;
 
+    		}
+    	}
+    }
     
     public int getAttemptedTries() {
         return aAttemptedTries;
