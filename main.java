@@ -42,10 +42,10 @@ public class main {
             int numberOfTries1 = gameHelper(line);
 
             if( numberOfTries <  numberOfTries1){
-                System.out.println("Player 1 is the winner with only " + numberOfTries + " mistake(s)");
+                System.out.println("Player 2 is the winner with only " + numberOfTries + " mistake(s)");
             }
             else if(numberOfTries >  numberOfTries1){
-                System.out.println("Player 2 is the winner with only " + numberOfTries1 + " mistake(s)");
+                System.out.println("Player 1 is the winner with only " + numberOfTries1 + " mistake(s)");
             }
             else{
                 System.out.println("It's a tie since both players used " + numberOfTries1 + " mistake(s)");
